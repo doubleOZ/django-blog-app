@@ -3,13 +3,22 @@
   <h1>Posts</h1>
   {% for post in posts %}
   <article class="post">
-    <h2>
-      <a href="{% url 'posts:page' slug=post.slug %}">
-        {{ post.title }}
-      </a>
-    </h2>
-    <p>{{ post.date }} by {{ post.author }}</p>
-    <p>{{ post.body }}</p>
+    <a href="{% url 'posts:page' slug=post.slug %}">
+      <h2>
+        <p>
+          {{ post.author }}
+          💠
+          {% now "Y" as current_year %}
+          {% if post.date|date:"Y" != current_year %}
+          {{ post.date | date:"M d, Y" }}
+          {% else %}
+          {{ post.date | date:"M d" }}
+          {% endif %}
+        </p>
+      </h2>
+      <p> {{ post.title }}</p>
+      <p>{{ post.body }}</p>
+    </a>
   </article>
   {% endfor %}
 </section>
