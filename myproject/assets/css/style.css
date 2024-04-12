@@ -16,8 +16,6 @@ nav {
   background-color: #44b78b;
   color: white;
   font-size: 2.5rem;
-  display: flex;
-  justify-content: space-between;
 }
 
 main {
@@ -52,6 +50,11 @@ a:hover {
   display: block;
   width: 100%;
   max-width: 800px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
 }
 
 .form-with-validation {
