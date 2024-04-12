@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <nav>
+    <nav class="nav">
         <div>
 
             <a href="/"><span role="img" aria-label="Home" title="Home">Home</span></a> |
@@ -23,12 +23,11 @@
             <a href="{% url 'posts:list' %}"><span role="img" aria-label="Posts" title="Posts">Posts</span></a> |
         </div>
 
-        {% if user.is_authenticated %}
         <div>
+            {% if user.is_authenticated %}
 
             <a href="{% url 'posts:new-post' %}"><span role="img" aria-label="New Post" title="New Post">New
-                    Post</span></a>
-            |
+                    Post</span></a> |
 
             <form class="logout" action="{% url 'users:logout' %}" method="post">
                 {% csrf_token %}
@@ -39,8 +38,8 @@
                     title="User Registration">Create User</span></a> |
             <a href="{% url 'users:login' %}"><span role="img" aria-label="User Login"
                     title="User Login">Login</span></a>
+            {% endif %}
         </div>
-        {% endif %}
     </nav>
     <main>
         {% block content %}
