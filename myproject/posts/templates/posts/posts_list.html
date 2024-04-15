@@ -2,8 +2,8 @@
 <section>
   <h1>Posts</h1>
   {% for post in posts %}
-  <article class="post">
-    <a href="{% url 'posts:page' slug=post.slug %}">
+  <article>
+    <a class="post" href="{% url 'posts:page' slug=post.slug %}">
       <h2>
         <p>
           {{ post.author }}
@@ -15,9 +15,9 @@
           {{ post.date | date:"M d" }}
           {% endif %}
         </p>
+        <p class="post-title"> {{ post.title }}</p>
+        <p>{{ post.body }}</p>
       </h2>
-      <p> {{ post.title }}</p>
-      <p>{{ post.body }}</p>
     </a>
   </article>
   {% endfor %}

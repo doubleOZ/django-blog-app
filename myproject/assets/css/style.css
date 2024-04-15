@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Attena";
+  src: url("../fonts/ATTENA.OTF") format("opentype");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -116,4 +121,14 @@ a:hover {
 .logout-button:hover {
   opacity: 0.85;
   cursor: pointer;
+}
+
+.post {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-title {
+  font-family: "Attena";
+  font-size: 2.5rem;
 }

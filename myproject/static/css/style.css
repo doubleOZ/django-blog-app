@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Attena";
+  src: url("../fonts/ATTENA.OTF") format("opentype");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -52,6 +57,11 @@ a:hover {
   max-width: 800px;
 }
 
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
 .form-with-validation {
   max-width: 600px;
   font-size: 1rem;
@@ -101,13 +111,24 @@ a:hover {
 }
 
 .logout-button {
-  display: inline-block;
+  color: #81dbb8;
   font-size: 2.5rem;
   background-color: rgb(0, 0, 0, 0);
   border: none;
+  font-family: monospace;
 }
 
 .logout-button:hover {
   opacity: 0.85;
   cursor: pointer;
+}
+
+.post {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-title {
+  font-family: "Attena";
+  font-size: 2.5rem;
 }
