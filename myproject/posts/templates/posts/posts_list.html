@@ -2,12 +2,22 @@
 <section>
   <h1>Posts</h1>
   {% for post in posts %}
+  {% comment %} <div class="card">
+    <img src="profile-picture.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="details">
+      <h2 class="username">{{ post.author}}</h2>
+      <p class="bio">{{ post.body }}</p>
+      <div class="social-links">
+
+      </div>
+    </div>
+  </div> {% endcomment %}
   <article>
     <a class="post" href="{% url 'posts:page' slug=post.slug %}">
       <h2>
         <p>
           {{ post.author }}
-          💠
+          ✴
           {% now "Y" as current_year %}
           {% if post.date|date:"Y" != current_year %}
           {{ post.date | date:"M d, Y" }}

@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Attena";
-  src: url("../fonts/ATTENA.OTF") format("opentype");
+  font-family: "Mauline";
+  src: url("../fonts/MAULINE.OTF") format("opentype");
 }
 
 * {
@@ -129,6 +129,6 @@ a:hover {
 }
 
 .post-title {
-  font-family: "Attena";
+  font-family: "Mauline";
   font-size: 2.5rem;
 }
