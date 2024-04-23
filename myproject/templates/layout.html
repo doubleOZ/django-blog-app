@@ -20,7 +20,7 @@
             {% if user.is_authenticated %}
             <span role="img" aria-label="Home" title="Home">{{ user.username }}</span> |
             {% else %}
-            <span>✴</span> |
+            <span style="font-size: 2rem;">✴</span> |
             {% endif %}
             <a href="{% url 'posts:list' %}"><span role="img" aria-label="Posts" title="Posts">Posts</span></a> |
             <a href="/"><span role="img" aria-label="Home" title="Home">Home</span></a> |
