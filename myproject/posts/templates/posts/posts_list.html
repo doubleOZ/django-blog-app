@@ -1,6 +1,6 @@
 {% extends 'layout.html' %} {% block title %} Posts {% endblock %} {% block content %}
 <section>
-  <h1>Posts</h1>
+  <h1 class="post-title">Posts</h1>
   {% for post in posts %}
   {% comment %} <div class="card">
     <img src="profile-picture.jpg" alt="Profile Picture" class="profile-picture">
@@ -15,7 +15,7 @@
   <article>
     <a class="post" href="{% url 'posts:page' slug=post.slug %}">
       <h2>
-        <p>
+        <p class="post-body">
           {{ post.author }}
           ✴
           {% now "Y" as current_year %}
